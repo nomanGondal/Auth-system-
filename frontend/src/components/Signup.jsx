@@ -38,7 +38,7 @@ const navigate = useNavigate();
 
     try {
     
-      const url="http://localhost:3000/auth/signup";
+      const url="https://auth-system-riyx.onrender.com/auth/signup";
       const response =await fetch(url, {
         method: 'POST',
         headers: {
