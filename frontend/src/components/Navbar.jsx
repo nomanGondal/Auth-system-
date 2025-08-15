@@ -10,7 +10,7 @@ const navigate = useNavigate();
     if (confirmLogout) {
     localStorage.removeItem("token");
     // Redirect to the login page
-    navigate('/login'); // Redirect to login page
+    navigate('/'); // Redirect to login page
   }
 }
   return (
