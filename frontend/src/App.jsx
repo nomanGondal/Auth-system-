@@ -21,12 +21,19 @@ function AppRoutes() {
       if (location.pathname === "/" || location.pathname === "/login" || location.pathname === "/signup") {
         navigate("/mainpage");
       }
-    } else {
+    }
+    if else {
       setIsAuthenticated(false);
-      if (location.pathname !== "/login" && location.pathname !== "/signup") {
-        navigate("/");
+      if (location.pathname === "/login"  || location.pathname !== "/signup") {
+        navigate("/login");
       }
     }
+    else {
+      setIsAuthenticated(false);
+      navigate ("/")
+    }
+    
+    
   }, [location.pathname, navigate]);
 
   return (
