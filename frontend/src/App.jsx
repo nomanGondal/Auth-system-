@@ -22,11 +22,11 @@ function AppRoutes() {
         navigate("/mainpage");
       }
     }
-    if else {
+    else if(location.pathname === "/login"  || location.pathname !== "/signup") {
       setIsAuthenticated(false);
-      if (location.pathname === "/login"  || location.pathname !== "/signup") {
+       
         navigate("/login");
-      }
+      
     }
     else {
       setIsAuthenticated(false);
