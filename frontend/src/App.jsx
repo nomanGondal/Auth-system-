@@ -9,32 +9,7 @@ import Mainpage from './components/Mainpage';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function AppRoutes() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    if (token) {
-      setIsAuthenticated(true);
-      if (location.pathname === "/" || location.pathname === "/login" || location.pathname === "/signup") {
-        navigate("/mainpage");
-      }
-    }
-    else if(location.pathname === "/login"  || location.pathname !== "/signup") {
-      setIsAuthenticated(false);
-       
-        navigate("/login");
-      
-    }
-    else {
-      setIsAuthenticated(false);
-      navigate ("/")
-    }
-    
-    
-  }, [location.pathname, navigate]);
+  
 
   return (
     <Routes>
