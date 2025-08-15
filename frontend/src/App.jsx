@@ -24,7 +24,7 @@ function AppRoutes() {
     } else {
       setIsAuthenticated(false);
       if (location.pathname !== "/login" && location.pathname !== "/signup") {
-        navigate("/login");
+        navigate("/");
       }
     }
   }, [location.pathname, navigate]);
